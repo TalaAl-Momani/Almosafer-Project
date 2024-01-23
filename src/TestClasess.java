@@ -27,13 +27,14 @@ public class TestClasess extends ParameterClass {
 	
 	@Test(description = "test number 1")
 	public void checkTheLanguge() {
-	   String theAactualLanguge=driver.findElement(By.xpath("//*[@id=\"__next\"]/header/div/div[1]/div[2]/div/a[1]")).getText();
-		myassert.assertEquals(theAactualLanguge, expectedlangugeEnglish);
-		System.out.println(theAactualLanguge);
+	   String AactualLanguge=driver.findElement(By.xpath("//*[@id=\"__next\"]/header/div/div[1]/div[2]/div/a[1]")).getText();
+		myassert.assertEquals(AactualLanguge, expectedlangugeArabic);
+		System.out.println(AactualLanguge);
 		
 		
 		
 	}
+
 	
 	@Test (description = "test number 2")
 	public void checkTheCurrency() {
@@ -58,7 +59,7 @@ public class TestClasess extends ParameterClass {
 	}
 	@SuppressWarnings("deprecation")
 	@Test(description= "test number 5")
-	public void Check_The_Depruter_Date (){ //تارييخ المغادره 
+	public void Check_The_Depruter_Date (){  
 		int numberOfDateExtra = 1;
 		Date todayTime= new Date();
 		int ActualdayOfTheMonth= todayTime.getDate();
@@ -68,7 +69,7 @@ public class TestClasess extends ParameterClass {
 	}
 		
 		
-	@SuppressWarnings("deprecation")// ضروري اعمللها امبورت عشان يروح الورننيغ انه الجمله عادي احطها 
+	@SuppressWarnings("deprecation")// 
 	@Test(description= "test number 6")
 	public void CheckTheBackDate (){
 		int numberOfDateExtra = 2;
@@ -86,14 +87,14 @@ public class TestClasess extends ParameterClass {
 		
 		int MyIndex=rand.nextInt(0,2 );
        
-		driver.get(MyWebsiteURLs[MyIndex]);//من الويبسايت اختار لينك عشوائيا حسب الحدود اما صفر او واحد
+		driver.get(MyWebsiteURLs[MyIndex]);
 		
-		if (driver.getCurrentUrl().contains("ar")) { //لما تكون عربي ar الاسبت انه تكون كلمة انجلش موجوده 
+		if (driver.getCurrentUrl().contains("ar")) {  
        
 		String lang=driver.findElement(By.xpath("//*[@id=\"__next\"]/header/div/div[1]/div[2]/div/a[1]")).getText();
 		
       
-		myassert.assertEquals(lang, expectedlangugeEnglish); // يعني الكلمه فوق حتكون انجلش 
+		myassert.assertEquals(lang, expectedlangugeEnglish);  
 		
 		
 		}else {
@@ -114,9 +115,9 @@ public class TestClasess extends ParameterClass {
 			String []EnglishCountries= {"dubai","jeddah","Riyad"};
 			int EnglishIndix=rand.nextInt(0,3);
 			int MyIndex=rand.nextInt(0,2 );
-			driver.get(MyWebsiteURLs[MyIndex]);//من الويبسايت اختار لينك عشوائيا حسب الحدود اما صفر او واحد
+			driver.get(MyWebsiteURLs[MyIndex]);
 			
-			if (driver.getCurrentUrl().contains("ar")) { //لما تكون عربي ar الاسبت انه تكون كلمة انجلش موجوده 
+			if (driver.getCurrentUrl().contains("ar")) { 
 				
 	        WebElement HotelTab=  driver.findElement(By.xpath("//*[@id=\"uncontrolled-tab-example-tab-hotels\"]"));
 			HotelTab.click();
@@ -162,7 +163,7 @@ public class TestClasess extends ParameterClass {
 		String SearchReasult=driver.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/section/span")).getText();
 		boolean ActualReasultInTheWebsite= SearchReasult.contains("found")|| SearchReasult.contains("وجدنا");
 		
-		myassert.assertEquals(ActualReasultInTheWebsite, true);
+    	myassert.assertEquals(ActualReasultInTheWebsite, true);
 		}
 		
 		@Test (description = "test number12", priority = 5)
@@ -181,7 +182,7 @@ public class TestClasess extends ParameterClass {
 				
 				
 				
-				
+			
 			}
 
 		}

@@ -6,7 +6,7 @@
       <class name="TestClasess">
         <methods>
           <include name="myBeforeTest"/>
-          <include name="DoneSearching"/>
+          <include name="checkTheLanguge"/>
         </methods>
       </class> <!-- TestClasess -->
     </classes>
